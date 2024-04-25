@@ -21,8 +21,9 @@ public class Account {
 	private int id;
 	
 	@NotNull(message = "{account.name.absent}")
-	@Pattern(regexp = "[A-Za-z+([A-Za-z]+)*",message = "{account.name.invalid}")
-	private String name;
+	@Pattern(regexp = "[A-Za-z]+([A-Za-z]+)*", message = "{account.name.invalid}")
+        private String name;
+
 	
 	@NotNull(message = "{account.balance.absent}")
 	@Range(min =10, max=100000,message="{account.balance.invalid}")
